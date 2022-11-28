@@ -1,0 +1,145 @@
+html{
+    font-size: 20px;
+    font-family: sans-serif;
+    background-color: #ddd;
+    color: #111;
+}
+
+@media (max-width: 768px) {
+    html{
+        font-size: 18px;
+    }
+}
+
+body{
+    margin: 0;
+}
+
+main{
+    margin: 0 auto;
+    max-width: 40rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-color: #eee;
+}
+
+h1{
+    margin: 1rem 1rem 0.5rem 1rem;
+    font-variant: small-caps;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #ca111d;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    border-bottom: 0.5rem #ca111d solid;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 0.2rem solid #111;
+}
+
+center{
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
+
+section{
+    margin: 2rem auto;
+    max-width: 30rem;
+}
+
+p{
+    line-height: 1.35rem;
+    hyphens: auto;
+    text-align: justify;
+}
+
+ul{
+    padding-left: 1rem;
+}
+
+li{
+    margin: 1rem 0;
+    hyphens: auto;
+    text-align: justify;
+}
+
+a{
+    text-decoration: none;
+    color: #ca111d;
+}
+ul a:hover, p a:hover{
+    border-bottom: 0.2rem solid #ca111d;
+}
+
+.img_grid{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.img_grid>a>img{
+    width: 100%;
+    object-fit: cover;
+    height: 12rem;
+    background-color: #888;
+}
+
+.infobox{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.fleuron{
+    margin: 4rem auto 2rem auto;
+    width: 2rem;
+    height: 2rem;
+    background-image: url(img/fleuron.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.img_card{
+    display: grid;
+    display: block;
+    max-width: 40rem;
+    padding: 1rem;
+    margin: 0 auto;
+}
+.img_card>img{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.img_card>.table_wrap{
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #ccc;
+}
+
+.table_wrap>table{
+    border-collapse: collapse;
+    padding: 1rem;
+}
+
+.img_card th{
+    min-width: 6rem;
+    text-align: right;
+}
+.img_card th, .img_card td{
+    padding: 0.2rem;
+}
+
+.token_tree{
+    white-space: pre-wrap;
+}

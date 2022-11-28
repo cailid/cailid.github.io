@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang=en>
+<meta name=viewport content="width=device-width,initial-scale=1.0">
+<title>CAILID</title>
+<link rel=icon href=img/favicon.png>
+<link rel=stylesheet href=style.css>
+
+<main>
+    <h1>CAILID</h1>
+    <center>Curated Artificial Intelligence Labeled Image Database</center>
+
+    <section>
+        <p>CAILID is an experimental database of high-quality manually curated and labeled images, suitable for testing, training, and fine-tuning machine learning models.</p>
+    </section>
+
+    <section>
+        <h2>Purpose</h2>
+        <ul>
+            <li>Adding a small selection of very high quality images with a distinctive label format to a dataset enables models to learn that label format. Image generation prompts can then use the same text style to precisely tailor the content they want to create.
+            <li>Many types of content that image generation models learn about has a small potential corpus. One could, for example, go through and label the bulk of an artist's entire work, potentially greatly improving future queries related to that topic.
+            <li>Manually curated data is not nearly as susceptible to the "80s"-problem, where if you want to generate data for a particular topic you often won't get an accurate representation of it; exemplified in the faux cultural memory of glowing neon colors that is strongly associated with the 80s in automatically tagged databases.
+        </ul>
+    </section>
+
+    <section>
+        <h2>Features</h2>
+        <ul>
+            <li>Each image is paired with a manually crafted token tree that describes the content in detail. Simple parsing rules can be applied to generate human-readable strings from this data, in various formats and lengths to prevent overfitting or to reduce the amount of tokens for training models with a limited input size.
+            <li>In addition to the content description, the images have various metadata tags that among other things describe the medium, style, artist, and time period of the work. Notably, photographs are paired with information about the camera, lens, and settings used when taking the picture. As style is represented separately from the content, it can be differentiated from actual depictions of the artists themselves. 
+            <li>CAILID always documents what license each image in the database is covered by. Combined with the extensive tagging system for topics like violence, nudity, and if public figures are depicted, one can get precise control over what data is used during training.
+            <li>Each image in the database is at least 1024x1024 pixels large, and free of any noticeable compression artifacts if close to that.
+            <li>The database does not contain the images themselves, only links to the actual files. These must be privately fetched through the URL where they were originally hosted. 
+        </ul>
+    </section>
+
+    <section>
+        <h2>Labeling philosophy</h2>
+        <p>Image labels are designed to accurately pin down the image in the theoretical space of all images that the database may contain for all features that could be of interest.</p>
+        <p>The labels "man, smiling", for example, provide many bits of information compared to no label at all. Adding "happy" to that same image provides few bits in comparison, but perhaps enough to be included &ndash; if it eliminates a sufficiently significant cluster of images where smiling men are smiling for other reasons than that they are happy.</p>
+        <p>In comparison, one would likely not add "eyes" as a tag to the previous image. The overwhelmingly vast majority of images in the "smiling man" category feature people that do have eyes, meaning it does not provide sufficient information.</p>
+        <p>Certain labels are strict subsets of others. An example of this might be "cat" as a subset of "animal". Such concept trees can be provided separately, enabling one to enrich training data  by sometimes replacing labels with their less-specific parents.</p>
+    </section>
+
+    <section>
+        <h2>Status</h2>
+        <p>Currently the amount of content in the database is fairly limited, and sourced from two locations for different purposes:</p>
+        <ul>
+            <li><a href='https://unsplash.com/'>Unsplash</a>, to get a wide selection aesthetically pleasing photographs that cover most labeling examples.
+            <li><a href='https://commons.wikimedia.org/wiki/Main_Page'>Wikimedia Commons</a>, to label all high-quality publicly available oil paintings by Peder Severin Krøyer (1851-1909), so as to verify potential improvements in image generation of a particular topic if CAILID is included in a training set.
+        </ul>
+    </section>
+
+    <section>
+        <h2>Database samples</h2>
+        <div class=img_grid>
+            <a href='sample.0.html'><img alt='A smiling knight' src='img/00000000.thumb.jpg'></a>
+            <a href='sample.1.html'><img alt='A cute yellow ball python' src='img/00000001.thumb.jpg'></a>
+            <a href='sample.2.html'><img alt='A hand throwing a cup of coffee' src='img/00000002.thumb.jpg'></a>
+            <a href='sample.3.html'><img alt='A pile of jigsaw puzzle pieces' src='img/00000003.thumb.jpg'></a>
+            <a href='sample.4.html'><img alt='A pondering man in glasses and yellow beanie' src='img/00000004.thumb.jpg'></a>
+            <a href='sample.5.html'><img alt='A stalking fox' src='img/00000005.thumb.jpg'></a>
+            <a href='sample.6.html'><img alt='An Iranian man with textiles' src='img/00000006.thumb.jpg'></a>
+            <a href='sample.7.html'><img alt='A buch of maps' src='img/00000007.thumb.jpg'></a>
+            <a href='sample.8.html'><img alt='A woman holding a folder' src='img/00000008.thumb.jpg'></a>
+        </div>
+    </section>
+
+    <section>
+        <h2>License</h2>
+        <p>The images in the database are copyrighted by their respective owners.</p>
+        <p>All additional database contents may be used by anyone for any private or commercial purpose.</p>
+    </section>
+
+    <section>
+        <h2>Contribute</h2>
+    </section>
+
+    <div class=fleuron></div>
+</main>
