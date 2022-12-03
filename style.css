@@ -139,7 +139,3 @@ ul a:hover, p a:hover{
 .img_card th, .img_card td{
     padding: 0.2rem;
 }
-
-.token_tree{
-    white-space: pre-wrap;
-}
